@@ -161,5 +161,5 @@
 
 
 > ## Ressources supplémentaires
->  - Documentation officielle de Godot : [Docs Godot Engine](https://docs.godotengine.org)
->  - Tutoriels vidéo sur Godot : [YouTube - Godot Engine Official](https://www.youtube.com/user/godotengine)
+>  - [Documentation Godot](https://docs.godotengine.org) officielle
+>  - Tutoriels vidéo sur [YouTube - Godot Engine Official](https://www.youtube.com/user/godotengine)
