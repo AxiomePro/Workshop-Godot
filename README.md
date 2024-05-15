@@ -1,8 +1,8 @@
-### Workshop sur Godot
+# Workshop sur Godot
 
 Bienvenue dans ce workshop sur Godot ! Au cours de cette session de 2h30, nous explorerons les bases de Godot, un moteur de jeu open-source et gratuit, afin de vous familiariser avec son fonctionnement et ses fonctionnalités.
 
-### Prérequis
+## Prérequis
 Avant de commencer ce workshop, assurez-vous d'avoir installé Godot sur votre ordinateur. Vous pouvez le télécharger depuis [le site officiel de Godot](https://godotengine.org/download).
 
 ### Structure du Workshop
