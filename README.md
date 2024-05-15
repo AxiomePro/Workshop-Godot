@@ -88,7 +88,7 @@ Ce workshop est divisé en plusieurs étapes, chacune couvrant un aspect spécif
     ```
 
 
-### 4. Mise en place d'un ATH (Affichage Tête Haute)
+### 4. Création d'un ATH (Affichage Tête Haute)
 **Description:** Explorez les concepts d'affichage en 2D sur un jeu 3D
 > [!TIP]
 > Vérifier le placement de vos noeud via l'interface 2D
