@@ -21,6 +21,9 @@ Ce workshop est divisé en plusieurs étapes, chacune couvrant un aspect spécif
 ## Étapes
 > [!CAUTION]
 > Suivez bien les instruction à la lettre pour que tout fonctionne correctement
+
+> [!TIP]
+> Testez votre jeu à chaque étape en cliquant sur "Éxecuter la scène actuelle"
 ### 1. Introduction à Godot
 **Description:** Dans cette étape, nous découvrirons l'interface de Godot et apprendrons à créer un nouveau projet
   - Ouvrez Godot et sélectionnez "Nouveau Projet".
