@@ -23,29 +23,29 @@
 > Suivez les instructions à la lettre pour que tout fonctionne correctement
 
 > [!TIP]
-> Testez votre jeu à chaque étapes en cliquant sur "Éxecuter la scène actuelle"
+> Testez votre jeu à chaque étape en cliquant sur "Éxecuter la scène actuelle"
 ### 1. Introduction à Godot
-- **Description:** Dans cette étape, nous découvrirons l'interface de Godot et apprendrons à créer un nouveau projet
+- **Description:** Découvrez l'interface de Godot et créez un nouveau projet
   - Ouvrez Godot et sélectionnez "Nouveau Projet".
   - Choisissez un emplacement pour votre projet et donnez-lui un nom.
   - Explorez l'interface utilisateur de Godot, y compris les différents panneaux et menus.
 
 
 ### 2. Création d'une scène
-- **Description:** Apprenez à créer des scènes, les éléments de base de tout jeu dans Godot
-  - Dans votre nouveau projet, créez une nouvelle scène en cliquant sur "Ajouter un nouvelle scène" et sélectionnez "Scène 3D" puis renomez votre "Node3D" en "scène".
+- **Description:** Créez une scène, avec des éléments de base de tout jeu
+  - Dans votre nouveau projet, créez une nouvelle scène en cliquant sur "Ajouter un nouvelle scène" et sélectionnez "Scène 3D" puis renomez votre "Node3D" en "scene".
   - Enregistrez votre scène et nommez-la "player.tscn".
 > [!IMPORTANT]
 > Tout ce qui sera fait par la suite sera bien evidement dans la scène "player.tcsn"
 
 
 ### 3. Gestion des mouvements d'un player
-- **Description:** Explorez les concepts de mouvement et de physique dans Godot.
+- **Description:** Explorez les concepts de mouvement et de physique
 > [!TIP]
 > Vérifier le placement de vos noeud via l'interface 3D
 
 - #### Mise en place de l'environnement
-  - Ajoutez un noeud "StaticBody3D" nomé "floor" pour créer un sol.
+  - Dans votre "scene", ajoutez un noeud "StaticBody3D" nomé "floor" pour créer un sol.
   - Dans votre "floor", ajoutez un noeud "MeshInstance3D" nomé "mesh" et sélectionnez la forme "BoxMesh" puis agrandissez le pour faire une platforme suffisament grande.
   - Dans votre "mesh", séléctionez "Maillage" puis "Créer une collision sœur convexe simplifiée".
 
@@ -92,12 +92,12 @@
 
 
 ### 4. Création d'un ATH (Affichage Tête Haute)
-- **Description:** Explorez les concepts d'affichage en 2D sur un jeu 3D
+- **Description:** Découvrez l'affichage en 2D sur un jeu 3D
 > [!TIP]
 > Vérifier le placement de vos noeud via l'interface 2D
 
 - #### Mise en place de l'ATH
-  - Dans votre "scène", ajoutez un noeud "CanvasLayer" qui serviras de liens entre un affichage 2D et une interface en 3D.
+  - Dans votre "scene", ajoutez un noeud "CanvasLayer" qui serviras de liens entre un affichage 2D et une interface en 3D.
   - Dans votre "CanvasLayer", ajoutez un noeud "Control" nomé "ATH" qui serviras de support pour le text.
   - Dans votre "ATH", ajoutez un noeud "Label" nomé "speed" pour pouvoir afficher du text.
 
