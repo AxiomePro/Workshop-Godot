@@ -162,4 +162,4 @@
 
 > ## Ressources supplémentaires
 >  - [Documentation Godot](https://docs.godotengine.org) officielle
->  - Tutoriels vidéo sur [YouTube - Godot Engine Official](https://www.youtube.com/user/godotengine)
+>  - Exemples vidéos sur [YouTube - Godot Engine Official](https://www.youtube.com/@GodotEngineOfficial)
