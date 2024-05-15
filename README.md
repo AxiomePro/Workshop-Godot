@@ -112,6 +112,47 @@ Ce workshop est divisé en plusieurs étapes, chacune couvrant un aspect spécif
     ```
 
 
+### 4. Rotation de la caméra du player
+**Description:** Approfondissez vos connaissances en gd script
+> [!IMPORTANT]
+> Cette partie s'éffectuera entierement dans le script "player.gd"
+
+> [!WARNING]
+> Si une fonction évoquée n'existe pas, créez la avec la syntaxe ```func <nom de fonction>(<parametres>):```
+
+  - Dans la fonction "_unhandled_input(event)" ajoutez la condition suivante pour ne bouger la caméra qu'en cas de mouvement de la souris
+    ```
+    if event is InputEventMouseMotion:
+    ```
+  > [!IMPORTANT]
+  > Le reste du code dans la fonction "_unhandled_input(event)" sera dans le **if** et donc indenté en conséquences
+ 
+  - Au début du script ajoutez le code suivant pour définir la sensibilité de la camera.
+    ```
+    const SENSITIVITY = 0.001
+    ```
+  - Dans la fonction "_unhandled_input(event)" ajoutez le code suivant pour tourner la caméra selon l'axe X.
+    ```
+    head.rotate_y(-event.relative.x * SENSITIVITY)
+    ```
+  - Au début du script ajoutez le code suivant pour créer un lien avec votre "camera".
+    ```
+    @onready var camera = $head/camera
+    ```
+  - Dans la fonction "_unhandled_input(event)" ajoutez le code suivant pour tourner la caméra selon l'axe Y.
+    ```
+    camera.rotate_x(-event.relative.y * SENSITIVITY)
+    ```
+  - Au début du script ajoutez le code suivant pour définir l'inclinaison verticale minimale et maximale de votre caméra.
+    ```
+    const MIN_Y = -60
+    const MAX_Y = 40
+    ```
+  - Dans la fonction "_unhandled_input(event)" ajoutez le code suivant pour bloquer l'inclinaison de la caméra selon les valeurs définies.
+    ```
+    camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(MIN_Y), deg_to_rad(MAX_Y))
+    ```
+
 ## Conclusion
 Félicitations pour avoir terminé ce workshop ! Nous espérons que vous avez apprécié cette introduction à Godot et que vous vous sentez plus à l'aise pour explorer davantage ce moteur de jeu puissant. N'hésitez pas à continuer à expérimenter et à créer vos propres jeux !
 
