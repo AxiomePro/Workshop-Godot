@@ -20,7 +20,7 @@
 
 ## Étapes
 > [!CAUTION]
-> Suivez bien les instructions à la lettre pour que tout fonctionne correctement
+> Suivez les instructions à la lettre pour que tout fonctionne correctement
 
 > [!TIP]
 > Testez votre jeu à chaque étapes en cliquant sur "Éxecuter la scène actuelle"
