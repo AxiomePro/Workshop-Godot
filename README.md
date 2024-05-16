@@ -1,4 +1,4 @@
-# $${\text{\color{blue}Workshop Godot}}$$
+# $${\text{Workshop Godot}}$$
 
 - Bienvenue dans ce workshop sur Godot ! Au cours de cette session de 2h30, nous explorerons les bases de Godot, un moteur de jeu open-source et gratuit, afin de vous familiariser avec son fonctionnement et ses fonctionnalités.
 
