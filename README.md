@@ -60,27 +60,27 @@
 > Si une fonction évoquée n'existe pas, créez la avec la syntaxe ```func <nom de fonction>(<parametres>):```
 - - Attachez un script dans votre "player" et nommez-le comme proposé, "player.gd".
   - Dans la function "_ready()" ajoutez le code suivant pour cacher votre curseur.
-    ```
+    ```gd
     Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
     ```
   - Au début du script ajoutez le code suivant pour définir la vitesse de votre player.
-    ```
+    ```gd
     const SPEED = 10.0
     ```
   - Dans la function **_physics_process(delta)** ajoutez le code suivant pour récupérer votre input.
-    ```
+    ```gd
     var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
     ```
   - Au début du script ajoutez le code suivant pour créer un lien avec votre "head".
-    ```
+    ```gd
     @onready var head = $head
     ```
   - Dans la function **_physics_process(delta)** ajoutez le code suivant pour transformer votre input en vecteur directionnel.
-    ```
+    ```gd
     var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
     ```
   - Dans la fonction **_physics_process(delta)** ajoutez le code suivant pour incrémenter la vitesse de votre player.
-    ```
+    ```gd
     if direction:
       velocity.x = direction.x * SPEED
       velocity.z = direction.z * SPEED
@@ -105,11 +105,11 @@
 > Si une fonction évoquée n'existe pas, créez la avec la syntaxe ```func <nom de fonction>(<parametres>):```
 - - Attachez un script dans votre "speed" et nommez-le comme proposé, "speed.gd".
   - Au début du script ajoutez le code suivant pour créer un lien avec votre "player".
-    ```
+    ```gd
     @onready var player = $"../../../player"
     ```
   - Dans la fonction **_process(delta)** ajoutez le code suivant pour modofier le text à afficher en continu.
-    ```
+    ```gd
     text = "speed x:%f y:%f" % [player.velocity.x, player.velocity.y]
     ```
 
@@ -123,35 +123,35 @@
 > Si une fonction évoquée n'existe pas, créez la avec la syntaxe ```func <nom de fonction>(<parametres>):```
 
 - - Dans la fonction **_unhandled_input(event)** ajoutez la condition suivante pour ne bouger la caméra qu'en cas de mouvement de la souris
-    ```
+    ```gd
     if event is InputEventMouseMotion:
     ```
 > [!IMPORTANT]
 > Le reste du code dans la fonction **_unhandled_input(event)** sera dans le **if** et donc indenté en conséquence
  
 - - Au début du script ajoutez le code suivant pour définir la sensibilité de la camera.
-    ```
+    ```gd
     const SENSITIVITY = 0.001
     ```
   - Dans la fonction **_unhandled_input(event)** ajoutez le code suivant pour tourner la caméra selon l'axe X.
-    ```
+    ```gd
     head.rotate_y(-event.relative.x * SENSITIVITY)
     ```
   - Au début du script ajoutez le code suivant pour créer un lien avec votre "camera".
-    ```
+    ```gd
     @onready var camera = $head/camera
     ```
   - Dans la fonction **_unhandled_input(event)** ajoutez le code suivant pour tourner la caméra selon l'axe Y.
-    ```
+    ```gd
     camera.rotate_x(-event.relative.y * SENSITIVITY)
     ```
   - Au début du script ajoutez le code suivant pour définir l'inclinaison verticale minimale et maximale de votre caméra.
-    ```
+    ```gd
     const MIN_Y = -60
     const MAX_Y = 40
     ```
   - Dans la fonction **_unhandled_input(event)** ajoutez le code suivant pour bloquer l'inclinaison de la caméra selon les valeurs définies.
-    ```
+    ```gd
     camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(MIN_Y), deg_to_rad(MAX_Y))
     ```
 
