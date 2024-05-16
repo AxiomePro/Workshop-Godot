@@ -120,7 +120,7 @@
     ```
 
 
-### 4. Rotation de la caméra du player
+### 5. Rotation de la caméra du player
 - **Description:** Approfondissez vos connaissances en gd script
 > [!IMPORTANT]
 > Cette partie s'éffectuera entierement dans le script "player.gd"
