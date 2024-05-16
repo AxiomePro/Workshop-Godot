@@ -35,7 +35,7 @@
   - Dans votre nouveau projet, créez une nouvelle scène en cliquant sur "Ajouter un nouvelle scène" et sélectionnez "Scène 3D" puis renomez votre **${\textsf{\color{red}Node3D}}$** en "scene".
   - Enregistrez votre scène et nommez-la "player.tscn".
 > [!IMPORTANT]
-> Tout ce qui sera fait par la suite sera bien evidement dans la scène "player.tcsn"
+> Tout ce qui sera fait par la suite sera bien evidement dans la scène "scene" (player.tcsn)
 
 
 ### 3. Gestion des mouvements d'un player
