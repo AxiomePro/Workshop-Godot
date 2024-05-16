@@ -64,6 +64,9 @@
 - #### Ajout d'un script pour le déplacement du player
 > [!WARNING]
 > Si une fonction évoquée n'existe pas, créez la avec la syntaxe ```func <nom de fonction>(<parametres>):```
+
+> [!CAUTION]
+> Si le code est déjà présent, ne l'écrivez pas en double
 - - Attachez un script dans votre "player" et nommez-le comme proposé, "player.gd".
   - Dans la function "_ready()" ajoutez le code suivant pour cacher votre curseur.
     ```gd
