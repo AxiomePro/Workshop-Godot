@@ -20,14 +20,15 @@
 
 
 ## Étapes
+> [!TIP]
+> Toute l'édition de script peut se faire depuis Godot via l'interface d'édition de script
+
 > [!CAUTION]
 > Suivez les instructions à la lettre pour que tout fonctionne correctement
 
 > [!TIP]
 > Testez votre jeu à chaque étape en cliquant sur "Éxecuter la scène actuelle"
 
-> [!TIP]
-> Toute l'édition de script peut se faire depuis Godot via l'interface d'édition de script
 ### 1. Introduction à Godot
 - **Description:** Découvrez l'interface de Godot et créez un nouveau projet
   - Ouvrez Godot et sélectionnez "Nouveau Projet".
