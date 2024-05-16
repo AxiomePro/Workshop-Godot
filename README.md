@@ -67,7 +67,7 @@
     ```
     const SPEED = 10.0
     ```
-  - Dans la function "_physics_process(delta)" ajoutez le code suivant pour récupérer votre input.
+  - Dans la function **_physics_process(delta)** ajoutez le code suivant pour récupérer votre input.
     ```
     var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
     ```
@@ -75,11 +75,11 @@
     ```
     @onready var head = $head
     ```
-  - Dans la function "_physics_process(delta)" ajoutez le code suivant pour transformer votre input en vecteur directionnel.
+  - Dans la function **_physics_process(delta)** ajoutez le code suivant pour transformer votre input en vecteur directionnel.
     ```
     var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
     ```
-  - Dans la fonction "_physics_process(delta)" ajoutez le code suivant pour incrémenter la vitesse de votre player.
+  - Dans la fonction **_physics_process(delta)** ajoutez le code suivant pour incrémenter la vitesse de votre player.
     ```
     if direction:
       velocity.x = direction.x * SPEED
@@ -108,7 +108,7 @@
     ```
     @onready var player = $"../../../player"
     ```
-  - Dans la fonction "_process(delta)" ajoutez le code suivant pour modofier le text à afficher en continu.
+  - Dans la fonction **_process(delta)** ajoutez le code suivant pour modofier le text à afficher en continu.
     ```
     text = "speed x:%f y:%f" % [player.velocity.x, player.velocity.y]
     ```
@@ -122,18 +122,18 @@
 > [!WARNING]
 > Si une fonction évoquée n'existe pas, créez la avec la syntaxe ```func <nom de fonction>(<parametres>):```
 
-- - Dans la fonction "_unhandled_input(event)" ajoutez la condition suivante pour ne bouger la caméra qu'en cas de mouvement de la souris
+- - Dans la fonction **_unhandled_input(event)** ajoutez la condition suivante pour ne bouger la caméra qu'en cas de mouvement de la souris
     ```
     if event is InputEventMouseMotion:
     ```
 > [!IMPORTANT]
-> Le reste du code dans la fonction "_unhandled_input(event)" sera dans le **if** et donc indenté en conséquence
+> Le reste du code dans la fonction **_unhandled_input(event)** sera dans le **if** et donc indenté en conséquence
  
 - - Au début du script ajoutez le code suivant pour définir la sensibilité de la camera.
     ```
     const SENSITIVITY = 0.001
     ```
-  - Dans la fonction "_unhandled_input(event)" ajoutez le code suivant pour tourner la caméra selon l'axe X.
+  - Dans la fonction **_unhandled_input(event)** ajoutez le code suivant pour tourner la caméra selon l'axe X.
     ```
     head.rotate_y(-event.relative.x * SENSITIVITY)
     ```
@@ -141,7 +141,7 @@
     ```
     @onready var camera = $head/camera
     ```
-  - Dans la fonction "_unhandled_input(event)" ajoutez le code suivant pour tourner la caméra selon l'axe Y.
+  - Dans la fonction **_unhandled_input(event)** ajoutez le code suivant pour tourner la caméra selon l'axe Y.
     ```
     camera.rotate_x(-event.relative.y * SENSITIVITY)
     ```
@@ -150,7 +150,7 @@
     const MIN_Y = -60
     const MAX_Y = 40
     ```
-  - Dans la fonction "_unhandled_input(event)" ajoutez le code suivant pour bloquer l'inclinaison de la caméra selon les valeurs définies.
+  - Dans la fonction **_unhandled_input(event)** ajoutez le code suivant pour bloquer l'inclinaison de la caméra selon les valeurs définies.
     ```
     camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(MIN_Y), deg_to_rad(MAX_Y))
     ```
