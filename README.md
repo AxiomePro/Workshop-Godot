@@ -1,5 +1,4 @@
 # $${\textsf{Workshop Godot}}$$
-
 - Bienvenue dans ce workshop sur Godot ! Au cours de cette session de 2h30, nous explorerons les bases de Godot, un moteur de jeu open-source et gratuit, afin de vous familiariser avec son fonctionnement et ses fonctionnalités.
 
 
@@ -33,7 +32,7 @@
 
 ### 2. Création d'une scène
 - **Description:** Créez une scène, avec des éléments de base de tout jeu
-  - Dans votre nouveau projet, créez une nouvelle scène en cliquant sur "Ajouter un nouvelle scène" et sélectionnez "Scène 3D" puis renomez votre "Node3D" en "scene".
+  - Dans votre nouveau projet, créez une nouvelle scène en cliquant sur "Ajouter un nouvelle scène" et sélectionnez "Scène 3D" puis renomez votre **${\textsf{\color{red}Node3D}}$** en "scene".
   - Enregistrez votre scène et nommez-la "player.tscn".
 > [!IMPORTANT]
 > Tout ce qui sera fait par la suite sera bien evidement dans la scène "player.tcsn"
@@ -45,16 +44,16 @@
 > Vérifier le placement de vos noeud via l'interface 3D
 
 - #### Mise en place de l'environnement
-  - Dans votre "scene", ajoutez un noeud "StaticBody3D" nomé "floor" pour créer un sol.
-  - Dans votre "floor", ajoutez un noeud "MeshInstance3D" nomé "mesh" et sélectionnez la forme "BoxMesh" puis agrandissez le pour faire une platforme suffisament grande.
+  - Dans votre "scene", ajoutez un noeud **${\textsf{\color{red}StaticBody3D}}$** nomé "floor" pour créer un sol.
+  - Dans votre "floor", ajoutez un noeud **${\textsf{\color{red}MeshInstance3D}}$** nomé "mesh" et sélectionnez la forme "BoxMesh" puis agrandissez le pour faire une platforme suffisament grande.
   - Dans votre "mesh", séléctionez "Maillage" puis "Créer une collision sœur convexe simplifiée".
 
 - #### Mise en place du player
-  - Dans votre "scène", ajoutez un noeud "CharacterBody3D" nomé "player" pour gérer les mouvements.
-  - Dans votre "player", ajoutez un noeud "MeshInstance3D" nomé "mesh" et sélectionnez la forme "CapsuleMesh" pour lui donner une forme.
+  - Dans votre "scène", ajoutez un noeud **${\textsf{\color{red}CharacterBody3D}}$** nomé "player" pour gérer les mouvements.
+  - Dans votre "player", ajoutez un noeud **${\textsf{\color{red}MeshInstance3D}}$** nomé "mesh" et sélectionnez la forme "CapsuleMesh" pour lui donner une forme.
   - Dans votre "mesh", séléctinez "Maillage" puis "Créer une collision sœur convexe simplifiée".
-  - Dans votre "player", ajoutez un noeud "Node3D" nomé "head" pour créer une tête qui pourras tourner sur elle même. Placez-la à hauteur de tête sur votre "player".
-  - Dans votre "head", ajoutez un noeud "Caméra3D" nomé "camera" pour ajouter une pov.
+  - Dans votre "player", ajoutez un noeud **${\textsf{\color{red}Node3D}}$** nomé "head" pour créer une tête qui pourras tourner sur elle même. Placez-la à hauteur de tête sur votre "player".
+  - Dans votre "head", ajoutez un noeud **${\textsf{\color{red}Caméra3D}}$** nomé "camera" pour ajouter une pov.
 
 - #### Ajout d'un script pour le déplacement du player
 > [!WARNING]
@@ -97,9 +96,9 @@
 > Vérifier le placement de vos noeud via l'interface 2D
 
 - #### Mise en place de l'ATH
-  - Dans votre "scene", ajoutez un noeud "CanvasLayer" qui serviras de liens entre un affichage 2D et une interface en 3D.
-  - Dans votre "CanvasLayer", ajoutez un noeud "Control" nomé "ATH" qui serviras de support pour le text.
-  - Dans votre "ATH", ajoutez un noeud "Label" nomé "speed" pour pouvoir afficher du text.
+  - Dans votre "scene", ajoutez un noeud **${\textsf{\color{grey}CanvasLayer}}$** qui serviras de liens entre un affichage 2D et une interface en 3D.
+  - Dans votre "CanvasLayer", ajoutez un noeud **${\textsf{\color{green}Control}}$** nomé "ATH" qui serviras de support pour le text.
+  - Dans votre "ATH", ajoutez un noeud **${\textsf{\color{green}Label}}$** nomé "speed" pour pouvoir afficher du text.
 
 - #### Ajout d'un script pour afficher le text dynamique
 > [!WARNING]
