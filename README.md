@@ -53,6 +53,7 @@
   - Dans votre "scene", ajoutez un noeud **${\textsf{\color{red}StaticBody3D}}$** nomé "floor" pour créer un sol.
   - Dans votre "floor", ajoutez un noeud **${\textsf{\color{red}MeshInstance3D}}$** nomé "mesh" et sélectionnez la forme "BoxMesh" puis agrandissez le pour faire une platforme suffisament grande.
   - Dans votre "mesh", séléctionez "Maillage" puis "Créer une collision sœur convexe simplifiée".
+  - Répétez ces deux dernières étapes **4** fois pour placer 4 murs autour de votre platforme.
 
 - #### Mise en place du player
   - Dans votre "scène", ajoutez un noeud **${\textsf{\color{red}CharacterBody3D}}$** nomé "player" pour gérer les mouvements.
