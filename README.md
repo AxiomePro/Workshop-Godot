@@ -7,6 +7,8 @@
 > [!NOTE]
 > Vous pouvez le télécharger depuis le [site officiel de Godot](https://godotengine.org/download)
 
+- Si vous pouvez, munisez vous d'une souris pour les manipulations 3D
+
 
 ## Structure du Workshop
 - Ce workshop est divisé en plusieurs étapes, chacune couvrant un aspect spécifique de Godot. Chaque étape comprend une description suivie d'un exercice pratique.
