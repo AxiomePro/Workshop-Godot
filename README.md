@@ -70,27 +70,27 @@
 > Si le code est déjà présent, ne l'écrivez pas en double
 - - Attachez un script dans votre "player" et nommez-le comme proposé, "player.gd".
   - Dans la function "_ready()" ajoutez le code suivant pour cacher votre curseur.
-    ```gd
+    ```gdscript
     Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
     ```
   - Au début du script ajoutez le code suivant pour définir la vitesse de votre player.
-    ```gd
+    ```gdscript
     const SPEED = 10.0
     ```
   - Dans la function **_physics_process(delta)** ajoutez le code suivant pour récupérer votre input.
-    ```gd
+    ```gdscript
     var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
     ```
   - Au début du script ajoutez le code suivant pour créer un lien avec votre "head".
-    ```gd
+    ```gdscript
     @onready var head = $head
     ```
   - Dans la function **_physics_process(delta)** ajoutez le code suivant pour transformer votre input en vecteur directionnel.
-    ```gd
+    ```gdscript
     var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
     ```
   - Dans la fonction **_physics_process(delta)** ajoutez le code suivant pour incrémenter la vitesse de votre player.
-    ```gd
+    ```gdscript
     if direction:
         velocity.x = direction.x * SPEED
         velocity.z = direction.z * SPEED
@@ -110,16 +110,16 @@
   - Dans votre "CanvasLayer", ajoutez un noeud **${\textsf{\color{green}Control}}$** nomé "ATH" qui serviras de support pour le text.
   - Dans votre "ATH", ajoutez un noeud **${\textsf{\color{green}Label}}$** nomé "speed" pour pouvoir afficher du text.
 
-- #### Ajout d'un script pour afficher le text dynamique
+- #### Ajout d'un script pour afficher un text dynamique
 > [!WARNING]
 > Si une fonction évoquée n'existe pas, créez la avec la syntaxe ```func <nom de fonction>(<parametres>):```
 - - Attachez un script dans votre "speed" et nommez-le comme proposé, "speed.gd".
   - Au début du script ajoutez le code suivant pour créer un lien avec votre "player".
-    ```gd
+    ```gdscript
     @onready var player = $"../../../player"
     ```
   - Dans la fonction **_process(delta)** ajoutez le code suivant pour modofier le text à afficher en continu.
-    ```gd
+    ```gdscript
     text = "speed x:%f y:%f" % [player.velocity.x, player.velocity.y]
     ```
 
@@ -133,35 +133,35 @@
 > Si une fonction évoquée n'existe pas, créez la avec la syntaxe ```func <nom de fonction>(<parametres>):```
 
 - - Dans la fonction **_unhandled_input(event)** ajoutez la condition suivante pour ne bouger la caméra qu'en cas de mouvement de la souris
-    ```gd
+    ```gdscript
     if event is InputEventMouseMotion:
     ```
 > [!IMPORTANT]
 > Le reste du code dans la fonction **_unhandled_input(event)** sera dans le **if** et donc indenté en conséquence
  
 - - Au début du script ajoutez le code suivant pour définir la sensibilité de la camera.
-    ```gd
+    ```gdscript
     const SENSITIVITY = 0.001
     ```
   - Dans la fonction **_unhandled_input(event)** ajoutez le code suivant pour tourner la caméra selon l'axe X.
-    ```gd
+    ```gdscript
     head.rotate_y(-event.relative.x * SENSITIVITY)
     ```
   - Au début du script ajoutez le code suivant pour créer un lien avec votre "camera".
-    ```gd
+    ```gdscript
     @onready var camera = $head/camera
     ```
   - Dans la fonction **_unhandled_input(event)** ajoutez le code suivant pour tourner la caméra selon l'axe Y.
-    ```gd
+    ```gdscript
     camera.rotate_x(-event.relative.y * SENSITIVITY)
     ```
   - Au début du script ajoutez le code suivant pour définir l'inclinaison verticale minimale et maximale de votre caméra.
-    ```gd
+    ```gdscript
     const MIN_Y = -60
     const MAX_Y = 40
     ```
   - Dans la fonction **_unhandled_input(event)** ajoutez le code suivant pour bloquer l'inclinaison de la caméra selon les valeurs définies.
-    ```gd
+    ```gdscript
     camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(MIN_Y), deg_to_rad(MAX_Y))
     ```
 
