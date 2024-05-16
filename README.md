@@ -91,11 +91,11 @@
   - Dans la fonction **_physics_process(delta)** ajoutez le code suivant pour incrémenter la vitesse de votre player.
     ```gd
     if direction:
-      velocity.x = direction.x * SPEED
-      velocity.z = direction.z * SPEED
+        velocity.x = direction.x * SPEED
+        velocity.z = direction.z * SPEED
     else:
-  		velocity.x = move_toward(velocity.x, 0, SPEED)
-	  	velocity.z = move_toward(velocity.z, 0, SPEED)
+        velocity.x = move_toward(velocity.x, 0, SPEED)
+        velocity.z = move_toward(velocity.z, 0, SPEED)
     ```
 
 
