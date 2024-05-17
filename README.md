@@ -107,10 +107,10 @@
 
 - #### Mise en place de l'ATH
   - Dans votre "scene", ajoutez un noeud **${\textsf{\color{grey}CanvasLayer}}$** qui serviras de liens entre un affichage 2D et une interface en 3D.
-  - Dans votre "CanvasLayer", ajoutez un noeud **${\textsf{\color{green}Control}}$** nomé "ATH" qui serviras de support pour le text.
-  - Dans votre "ATH", ajoutez un noeud **${\textsf{\color{green}Label}}$** nomé "speed" pour pouvoir afficher du text.
+  - Dans votre "CanvasLayer", ajoutez un noeud **${\textsf{\color{green}Control}}$** nomé "ATH" qui serviras de support pour le texte.
+  - Dans votre "ATH", ajoutez un noeud **${\textsf{\color{green}Label}}$** nomé "speed" pour pouvoir afficher du texte.
 
-- #### Ajout d'un script pour afficher un text dynamique
+- #### Ajout d'un script pour afficher un texte dynamique
 > [!WARNING]
 > Si une fonction évoquée n'existe pas, créez la avec la syntaxe ```func <nom de fonction>(<parametres>):```
 - - Attachez un script dans votre "speed" et nommez-le comme proposé, "speed.gd".
@@ -118,7 +118,7 @@
     ```gdscript
     @onready var player = $"../../../player"
     ```
-  - Dans la fonction **_process(delta)** ajoutez le code suivant pour modifier le text à afficher en continu.
+  - Dans la fonction **_process(delta)** ajoutez le code suivant pour modifier le texte à afficher en continu.
     ```gdscript
     text = "speed x:%f y:%f" % [player.velocity.x, player.velocity.y]
     ```
