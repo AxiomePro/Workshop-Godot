@@ -22,12 +22,11 @@
 ## Étapes
 > [!TIP]
 > Toute l'édition de script peut se faire depuis Godot via l'interface d'édition de script
+> Testez votre jeu à chaque étape en cliquant sur "Éxecuter la scène actuelle"
 
 > [!CAUTION]
 > Suivez les instructions à la lettre pour que tout fonctionne correctement
-
-> [!TIP]
-> Testez votre jeu à chaque étape en cliquant sur "Éxecuter la scène actuelle"
+> Retirez ```pass``` d'une fonction pour l'utiliser
 
 ### 1. Introduction à Godot
 - **Description:** Découvrez l'interface de Godot et créez un nouveau projet
@@ -120,7 +119,7 @@
     ```
   - Dans la fonction **_process(delta)** ajoutez le code suivant pour modifier le texte à afficher en continu.
     ```gdscript
-    text = "speed x:%f y:%f" % [player.velocity.x, player.velocity.y]
+    text = "speed x:%f z:%f" % [player.velocity.x, player.velocity.z]
     ```
 
 
