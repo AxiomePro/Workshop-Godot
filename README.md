@@ -87,7 +87,7 @@
     ```
   - Dans la function **_physics_process(delta)** ajoutez le code suivant pour transformer votre input en vecteur directionnel.
     ```gdscript
-    var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+    var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
     ```
   - Dans la fonction **_physics_process(delta)** ajoutez le code suivant pour incrémenter la vitesse de votre player.
     ```gdscript
