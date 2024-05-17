@@ -69,7 +69,7 @@
 > [!CAUTION]
 > Si le code est déjà présent, ne l'écrivez pas en double
 - - Attachez un script dans votre "player" et nommez-le comme proposé, "player.gd".
-  - Dans la function "_ready()" ajoutez le code suivant pour cacher votre curseur.
+  - Dans la function **_ready()** ajoutez le code suivant pour cacher votre curseur.
     ```gdscript
     Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
     ```
@@ -160,6 +160,49 @@
     ```gdscript
     head.rotation.x = clamp(head.rotation.x, deg_to_rad(MIN_Y), deg_to_rad(MAX_Y))
     ```
+
+
+### 6. Mise en place d'un timer
+- **Description:** Découvrez le fonctionnement des signaux sur Godot
+> [!TIP]
+> Vérifier le placement de vos noeud via l'interface 2D
+
+- #### Mise en place du timer
+  - Dans votre "CanvasLayer", ajoutez un noeud **${\textsf{\color{grey}Timer}}$** pour créer un timer.
+  - Dans votre "ATH", ajoutez un noeud **${\textsf{\color{green}Label}}$** nomé "time" pour afficher le timer.
+
+- #### Code et affichage du timer
+> [!WARNING]
+> Si une fonction évoquée n'existe pas, créez la avec la syntaxe ```func <nom de fonction>(<parametres>):```
+
+- - Attachez un script dans votre "time" et nommez-le comme proposé, "time.gd".
+  - Dans votre "Timer", séléctionnez "Noeud" puis "Connecter...", choisissze "timeout()" puis trouvez et séléctionnez "time" et cliquez sur "Connecter" pour lié le signal "timeout" du timer à votre script "time.gd"
+  - Au début du script ajoutez le code suivant pour définir les minutes et secondes initiales de votre timer.
+    ```gdscript
+    var seconds = 0.0
+    var minutes = 0.0
+    ```
+  - Dans la function **_on_timer_timeout()** ajoutez le code suivant pour incrémenter votre timer.
+    ```gdscript
+    secopnds += 1.0
+    if seconds == 60.0:
+      minutes += 1.0
+      seconds = 0.0
+    ```
+  - Dans la function **_on_timer_timeout()** ajoutez le code suivant pour créer une variable qui serviras à afficher "1m09" au lieu de "1m9".
+    ```gdscript
+    var zero = ""
+    ```
+  - Dans la function **_on_timer_timeout()** ajoutez le code suivant pour ajouter le "0" si nécéssaire.
+    ```gdscript
+    if seconds < 10.0:
+      zero = "0"
+    ```
+  - Dans la fonction **_on_timer_timeout()** ajoutez le code suivant pour afficher votre timer.
+    ```gdscript
+    text = "Temps Restant: %d:%s%d" % [minutes, zero, seconds]
+    ```
+
 
 ## Conclusion
 - Félicitations pour avoir terminé ce workshop ! Nous espérons que vous avez apprécié cette introduction à Godot et que vous vous sentez plus à l'aise pour explorer davantage ce moteur de jeu puissant. N'hésitez pas à continuer à expérimenter et à créer vos propres jeux !
