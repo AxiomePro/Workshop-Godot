@@ -118,7 +118,7 @@
     ```gdscript
     @onready var player = $"../../../player"
     ```
-  - Dans la fonction **_process(delta)** ajoutez le code suivant pour modofier le text à afficher en continu.
+  - Dans la fonction **_process(delta)** ajoutez le code suivant pour modifier le text à afficher en continu.
     ```gdscript
     text = "speed x:%f y:%f" % [player.velocity.x, player.velocity.y]
     ```
