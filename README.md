@@ -49,8 +49,8 @@
 > Vérifier le placement de vos noeud via l'interface 3D
 
 - #### Mise en place de l'environnement
-  - Dans votre "scene", ajoutez un noeud **${\textsf{\color{red}StaticBody3D}}$** nomé "floor" pour créer un sol.
-  - Dans votre "floor", ajoutez un noeud **${\textsf{\color{red}MeshInstance3D}}$** nomé "mesh" et sélectionnez la forme "BoxMesh" puis agrandissez le pour faire une platforme suffisament grande.
+  - Dans votre "scene", ajoutez un noeud **${\textsf{\color{red}StaticBody3D}}$** nomé "bounds" pour créer un sol.
+  - Dans votre "bounds", ajoutez un noeud **${\textsf{\color{red}MeshInstance3D}}$** nomé "mesh" et sélectionnez la forme "BoxMesh" puis agrandissez le pour faire une platforme suffisament grande.
   - Dans votre "mesh", séléctionez "Maillage" puis "Créer une collision sœur convexe simplifiée".
   - Répétez ces deux dernières étapes **4** fois pour placer 4 murs autour de votre platforme.
 
