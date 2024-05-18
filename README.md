@@ -177,6 +177,18 @@
 
 - - Attachez un script dans votre "time" et nommez-le comme proposé, "time.gd".
   - Dans votre "Timer", séléctionnez "Noeud" puis "Connecter...", choisissze "timeout()" puis trouvez et séléctionnez "time" et cliquez sur "Connecter" pour lié le signal "timeout" du timer à votre script "time.gd"
+  - Au début du script ajoutez le code suivant pour créer un liens avec le "Timer".
+    ```gdscript
+    @onready var timer = $"../../Timer"
+    ```
+  - Dans la function **_ready()** ajoutez le code suivant pour démarrer timer avec la scène.
+    ```gdscript
+    timer.autostart = true
+    ```
+  - Dans la function **_ready()** ajoutez le code suivant pour afficher un premier texte avant l'affichage de la première seconde.
+    ```gdscript
+    text = "Temps écoulé: 0:00"
+    ```
   - Au début du script ajoutez le code suivant pour définir les minutes et secondes initiales de votre timer.
     ```gdscript
     var seconds = 0.0
@@ -200,7 +212,7 @@
     ```
   - Dans la fonction **_on_timer_timeout()** ajoutez le code suivant pour afficher votre timer.
     ```gdscript
-    text = "Temps Restant: %d:%s%d" % [minutes, zero, seconds]
+    text = "Temps écoulé: %d:%s%d" % [minutes, zero, seconds]
     ```
 
 
