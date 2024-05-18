@@ -184,7 +184,7 @@
     ```
   - Dans la function **_on_timer_timeout()** ajoutez le code suivant pour incrémenter votre timer.
     ```gdscript
-    secopnds += 1.0
+    seconds += 1.0
     if seconds == 60.0:
       minutes += 1.0
       seconds = 0.0
