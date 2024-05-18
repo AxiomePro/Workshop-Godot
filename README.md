@@ -145,11 +145,15 @@
     ```
   - Dans la fonction **_unhandled_input(event)** ajoutez le code suivant pour tourner la caméra selon l'axe X.
     ```gdscript
-    rotate_y(-event.relative.x * SENSITIVITY)
+    head.rotate_y(-event.relative.x * SENSITIVITY)
+    ```
+  - Au début du script ajoutez le code suivant pour faire un liens avec la "camera".
+    ```gdscript
+    @onready var camera = $head/camera
     ```
   - Dans la fonction **_unhandled_input(event)** ajoutez le code suivant pour tourner la caméra selon l'axe Y.
     ```gdscript
-    head.rotate_x(-event.relative.y * SENSITIVITY)
+    camera.rotate_x(-event.relative.y * SENSITIVITY)
     ```
   - Au début du script ajoutez le code suivant pour définir l'inclinaison verticale minimale et maximale de votre caméra.
     ```gdscript
@@ -158,7 +162,7 @@
     ```
   - Dans la fonction **_unhandled_input(event)** ajoutez le code suivant pour bloquer l'inclinaison de la caméra selon les valeurs définies.
     ```gdscript
-    head.rotation.x = clamp(head.rotation.x, deg_to_rad(MIN_Y), deg_to_rad(MAX_Y))
+    camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(MIN_Y), deg_to_rad(MAX_Y))
     ```
 
 
