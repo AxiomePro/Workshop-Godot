@@ -220,6 +220,53 @@
     ```
 
 
+### 7. Amélioration du player
+- **Description:** Simulez le déplacement vertical des pas
+
+> [!IMPORTANT]
+> Cette partie s'éffectuera entierement dans le script "player.gd"
+
+> [!WARNING]
+> Si une fonction évoquée n'existe pas, créez la avec la syntaxe ```func <nom de fonction>(<parametres>):```
+
+- - Au début du script ajoutez le code suivant pour créer un liens avec la "CollisionShape3D".
+    ```gdscript
+    @onready var player = $CollisionShape3D
+    ```
+  - Au début du script ajoutez le code suivant pour définir la fréquence de variation de hauteur.
+    ```gdscript
+    const FREQ = 2.0
+    ```
+  - Au début du script ajoutez le code suivant pour définir l'amplitude de la variation de hauteur.
+    ```gdscript
+    const AMP = 0.3
+    ```
+  - Au début du script ajoutez le code suivant pour définir une variable de temps qui va permettre de changer la hauteur au fur et à mesure.
+    ```gdscript
+    var time = 0.0
+    ```
+  - Dans la function **_physics_process(delta)** ajoutez le code suivant pour incrémenter votre "time" à chaque passage de boucle.
+    ```gdscript
+    time += delta * velocity.length() / 2 * float(is_on_floor())
+    ```
+  - Dans la function **_physics_process(delta)** ajoutez le code suivant pour définir un vecteur 3d.
+    ```gdscript
+    var pos = Vector3.ZERO
+    ```
+  - Dans la function **_physics_process(delta)** ajoutez le code suivant pour incrémenter votre position en y selon le "time", la "FREQ" et l'"AMP".
+    ```gdscript
+    pos.y = sin(time * FREQ) * AMP
+    ```
+  - Dans la function **_physics_process(delta)** ajoutez le code suivant pour incrémenter votre position en x selon le "time", la "FREQ" et l'"AMP".
+    ```gdscript
+    pos.x = cos(time * FREQ / 2) * AMP
+    ```
+  - Dans la function **_physics_process(delta)** ajoutez le code suivant pour associer votre vecteur 3d à votre "CollisionShape3D".
+    ```gdscript
+    player.transform.origin = pos
+    ```
+
+
 ## Conclusion
 - Félicitations pour avoir terminé ce workshop ! Nous espérons que vous avez apprécié cette introduction à Godot et que vous vous sentez plus à l'aise pour explorer davantage ce moteur de jeu puissant. N'hésitez pas à continuer à expérimenter et à créer vos propres jeux !
 
