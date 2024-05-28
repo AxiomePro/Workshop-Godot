@@ -229,11 +229,7 @@
 > [!WARNING]
 > Si une fonction évoquée n'existe pas, créez la avec la syntaxe ```func <nom de fonction>(<parametres>):```
 
-- - Au début du script ajoutez le code suivant pour créer un liens avec la "CollisionShape3D".
-    ```gdscript
-    @onready var player = $CollisionShape3D
-    ```
-  - Au début du script ajoutez le code suivant pour définir la fréquence de variation de hauteur.
+- - Au début du script ajoutez le code suivant pour définir la fréquence de variation de hauteur.
     ```gdscript
     const FREQ = 2.0
     ```
@@ -263,7 +259,7 @@
     ```
   - Dans la function **_physics_process(delta)** ajoutez le code suivant pour associer votre vecteur 3d à votre "CollisionShape3D".
     ```gdscript
-    player.transform.origin = pos
+    camera.transform.origin = pos
     ```
 
 
